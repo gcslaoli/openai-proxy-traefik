@@ -1,6 +1,6 @@
 # openai-proxy-traefik
 
-使用traefik作为openai的反向代理,解决openai的API在国内无法访问的问题
+使用traefik作为openai的反向代理,解决openai的API在国内无法访问的问题,本服务需部署在可以正常访问api.openai.com的服务器上
 
 ## 配置
 
