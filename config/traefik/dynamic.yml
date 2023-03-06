@@ -1,0 +1,17 @@
+http:
+  services:
+    openai:
+      loadBalancer:
+        passHostHeader: false
+        servers:
+          - url: https://api.openai.com
+  routers:
+    openai:
+      entryPoints:
+        - websecure
+      rule: "Host(`yourdomain.com`)"
+      service: openai
+      tls:
+        certResolver: letsencrypt
+        domains:
+          - main: "yourdomain.com"
